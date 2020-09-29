@@ -23,7 +23,7 @@ To run a comparative analysis of these two data sets the following variables wer
 # Data Exploration
 ```{r, include=FALSE}
 #All precursor code
-setwd("C:/Users/khize/OneDrive/Desktop/STA304/PS1")
+#setwd("C:/Users/khize/OneDrive/Desktop/STA304/PS1")
 options(stringsAsFactors = FALSE)
 data<-read.csv("Daily Shelter.csv", header=TRUE)
 covid<-read.csv("COVID19 cases.csv", header=TRUE)
@@ -82,7 +82,7 @@ As crowd restrictions had to be put in place, the number of people that existing
 #grid.newpage()
 condensed %>% ggplot(aes(x=date, y= s_cap)) + geom_line(size = 1, colour = "#000099") + 
   scale_x_date(date_breaks = "1 month", date_labels = "%b") +
-  labs(x= "Date", y= "Daily Total Shelters Capacity", title = "Figure 2", subtitle= "Toronto Shelters Total Daily Capacity")
+  labs(x= "Month (2020)", y= "Daily Total Shelters Capacity", title = "Figure 2", subtitle= "Toronto Shelters Total Daily Capacity")
 ```
 
 Figure 2 shows that prior to COVID-19 protocols shelters had the capacity to accommodate between 7000-7500 people daily. 
