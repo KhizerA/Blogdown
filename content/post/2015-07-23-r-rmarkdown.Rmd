@@ -21,16 +21,80 @@ To run a comparative analysis of these two data sets the following variables wer
 * COVID-19 data set: date, daily new cases 
 
 # Data Exploration
--covid graph
--daily capacity 
+```{r, include=FALSE}
+#All precursor code
+setwd("C:/Users/khize/OneDrive/Desktop/STA304/PS1")
+options(stringsAsFactors = FALSE)
+data<-read.csv("Daily Shelter.csv", header=TRUE)
+covid<-read.csv("COVID19 cases.csv", header=TRUE)
+library(tidyverse)
+library(visdat)
+library(skimr)
+library(plyr)
+library(grid)
+library(devtools)
+library(ggthemes)
+
+#Cleaning the dates on the data set to make them readable by R 
+for (i in 1:length(data$OCCUPANCY_DATE)) {
+  data$OCCUPANCY_DATE[i] <- gsub("T00:00:00", "", data$OCCUPANCY_DATE[i])
+}
+
+#Putting the critical variables in a dataframe for calculations
+daily <- data.frame(date = data$OCCUPANCY_DATE, capacity =data$CAPACITY, occupancy= data$OCCUPANCY)
+ddif <- as.Date("2020-09-27") - as.Date(data$OCCUPANCY_DATE)
+daily$dif = ddif
+
+#Because the data set has separate daily statistics for each shelter, 
+#we want to add them up to examine total daily numbers and clean up the data
+condensed <- data.frame(days = c(270:1), s_cap = c(1:270), s_occ = c(1:270))
+for (i in 1:270) {
+  filtered <- filter(daily, dif == i)
+  sum_c <- sum(filtered[2])
+  sum_o <- sum(filtered[3])
+  condensed$s_cap[i] <- sum_c
+  condensed$s_occ[i] <- sum_o
+}
+condensed$days <- rev(condensed$days)
+condensed$s_cap <- rev(condensed$s_cap)
+condensed$s_occ<- rev(condensed$s_occ)
+condensed$date <- seq(as.Date("2020-01-01"), as.Date("2020-09-26"), by="days")
+condensed$ratio <- (condensed$s_occ / condensed$s_cap) * 100
+
+#Cleaning the toronto covid data set
+cases <- count(covid$Reported.Date)
+
+#Graphs
+theme_set(theme_igray())
+```
+
+```{r  echo=FALSE, fig.align="center"}
+cases %>% ggplot(aes(x=as.Date(x), y=freq)) + geom_line(size = 1, colour = "#CC0000") + 
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  labs(x= "Month (2020)", y= "Daily Reported Cases", title = "Figure 1", subtitle= "Toronto Daily New COVID-19 Cases")
+```
+
+To first contextualize the analysis, the timeline of positive COVID-19 cases in Toronto can be seen in Figure 1. The severity of the virus was realized in mid-March right when new cases had started to significantly escalate. At this point the city of Toronto and provincial government began to implement restrictions on the number of people allowed in enclosed areas, including in public spheres such as homeless shelters (Nielsen 2020). These were put in place for the safety of citizens health and to mitigate the spread of the virus, though for spaces such as shelters this could have potentially worked in the detriment of those that rely on the shelter system. Perhaps even more so during a period of economic downturn that saw unemployment in the city rise by almost 10%, which could potentially cause a rise in demand for shelters with the looming rent crisis (Statistics Canada 2020). 
+
+As crowd restrictions had to be put in place, the number of people that existing homeless shelters could accommodate would have to decrease. This is described in the data set's information stating that the capacity figures are a statement of the number of beds available, rather they are the number of people that are legally allowed in the shelter spaces. The evident effect of the pandemic on shelter capacity is reflected below.
+
+```{r  echo=FALSE, fig.align= "center"}
+#grid.newpage()
+condensed %>% ggplot(aes(x=date, y= s_cap)) + geom_line(size = 1, colour = "#000099") + 
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  labs(x= "Date", y= "Daily Total Shelters Capacity", title = "Figure 2", subtitle= "Toronto Shelters Total Daily Capacity")
+```
+
+Figure 2 shows that prior to COVID-19 protocols shelters had the capacity to accommodate between 7000-7500 people daily. 
+
 -occupancy + ratio 
 
 
 # Conclusion 
 -all 4 graphs
 # References 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE)
+```{r}
+
 ```
 
 # R Markdown
