@@ -4,10 +4,13 @@ author: "Khizer Asad"
 date: 2020-09-27T13:09:13-06:00
 categories: ["R"]
 tags: ["R Markdown", "plot"]
-output: html_document
+
 
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 # Abstract
 
 This study seeks to examine the effects of the COVID-19 pandemic on the occupancy of Toronto's homeless shelters. From the public Shelter Occupancy data set it is observed that during the spread of the virus, demand for spaces in shelters decreased significantly. Although there is not enough data available to fully comprehend the causal factors of this perhaps surprising result. 
