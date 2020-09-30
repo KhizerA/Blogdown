@@ -3,43 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-09-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/</loc>
-    <lastmod>2020-09-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/plot/</loc>
-    <lastmod>2020-09-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-09-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2020/09/27/ps1/</loc>
-    <lastmod>2020-09-27T00:00:00+00:00</lastmod>
+    <loc>/2020/09/29/test/</loc>
+    <lastmod>2020-09-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-09-27T13:09:13-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/plot/</loc>
+    <lastmod>2020-09-27T13:09:13-06:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/r/</loc>
-    <lastmod>2020-09-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-27T13:09:13-06:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/r-markdown/</loc>
-    <lastmod>2020-09-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-27T13:09:13-06:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-09-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-27T13:09:13-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2020/09/27/torontos-shelters-during-the-covid-19-pandemic/</loc>
+    <lastmod>2020-09-27T13:09:13-06:00</lastmod>
   </url>
   
   <url>
@@ -55,6 +60,10 @@
   <url>
     <loc>/2015/01/01/lorem-ipsum/</loc>
     <lastmod>2015-01-01T13:09:13-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/1/01/01/ps1/</loc>
   </url>
   
 </urlset>

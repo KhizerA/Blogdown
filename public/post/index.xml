@@ -6,14 +6,24 @@
     <description>Recent content in Posts on Khizer&#39;s Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>PS1</title>
-      <link>/2020/09/27/ps1/</link>
-      <pubDate>Sun, 27 Sep 2020 00:00:00 +0000</pubDate>
+      <title>test</title>
+      <link>/2020/09/29/test/</link>
+      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/2020/09/27/ps1/</guid>
-      <description>AbstractIntroductionThe Toronto open data portal contains many up to date public data sets concerning the cities on goings. One of which is the homeless shelter occupancy statistics, it is conveniently updated every day so we can examine the daily changes of those utilizing the city’s public shelters. Given the availability of this data alongside the obvious confirmed COVID-19 cases data for the city I decided to examine the impact of the pandemic on Toronto’s shelters.</description>
+      <guid>/2020/09/29/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Toronto&#39;s Shelters During the COVID-19 Pandemic</title>
+      <link>/2020/09/27/torontos-shelters-during-the-covid-19-pandemic/</link>
+      <pubDate>Sun, 27 Sep 2020 13:09:13 -0600</pubDate>
+      
+      <guid>/2020/09/27/torontos-shelters-during-the-covid-19-pandemic/</guid>
+      <description>AbstractThis study seeks to examine the effects of the COVID-19 pandemic on the occupancy of Toronto’s homeless shelters. From the public Shelter Occupancy data set it is observed that during the spread of the virus, demand for spaces in shelters decreased significantly. Although there is not enough data available to fully comprehend the causal factors of this perhaps surprising result.
+IntroductionThe Toronto open data portal contains many up to date public data sets concerning the cities on goings, one of which is the homeless shelter occupancy statistics.</description>
     </item>
     
     <item>
@@ -33,6 +43,16 @@
       
       <guid>/2015/01/01/lorem-ipsum/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title>PS1</title>
+      <link>/1/01/01/ps1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/1/01/01/ps1/</guid>
+      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</description>
     </item>
     
   </channel>
