@@ -1,11 +1,11 @@
 ---
 title: "Toronto's Shelters During the COVID-19 Pandemic"
 author: "Khizer Asad"
-date: '2020-09-27'
-categories: R
-tags:
-- R Markdown
-- plot
+date: 2020-09-27T13:09:13-06:00
+categories: ["R"]
+tags: ["R Markdown", "plot"]
+output: html_document
+
 ---
 
 # Abstract
